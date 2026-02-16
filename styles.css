@@ -97,6 +97,12 @@ h2 {
 .bio p {
   margin: 0.5rem 0;
 }
+.bio {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
 .bio,
 .games {
   max-width: 700px;
@@ -111,7 +117,9 @@ h2 {
   margin-top: 2rem;
 }
 .links {
-  margin-top: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .links a {
   display: inline-block;
@@ -122,11 +130,24 @@ h2 {
   text-decoration: none;
   border-radius: 8px;
   font-weight: 500;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
 }
 .links a:hover {
   background-color: #1e40af;
   transform: scale(1.05);
+}
+.donate-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5rem;
+}
+.donate-button input[type="image"] {
+  width: auto;
+  height: 40px;
+  cursor: pointer;
 }
 footer {
   margin-top: 3rem;
@@ -146,7 +167,9 @@ footer {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
   background: #f3f4f6;
-  transition: width 0.2s, height 0.2s;
+  transition:
+    width 0.2s,
+    height 0.2s;
 }
 
 .game-item {
@@ -230,6 +253,29 @@ footer {
   .site-logo {
     border-radius: 10px;
   }
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+}
+
+.tech-logo {
+  width: 280px;
+  height: 100px;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.tech-logo:hover {
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
