@@ -17,8 +17,8 @@ header {
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   padding: 0;
-  min-height: 200px;
-  height: 200px;
+  min-height: 280px;
+  height: 280px;
   overflow: hidden;
 }
 
@@ -181,8 +181,14 @@ footer {
   margin-bottom: 1.5rem;
   padding: 1.2rem 1.2rem 1.2rem 1rem;
   gap: 1.2rem;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, cursor 0.2s;
   border: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.game-item:hover {
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
 }
 
 .game-item:nth-child(2) {

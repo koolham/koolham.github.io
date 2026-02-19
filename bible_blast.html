@@ -174,6 +174,56 @@
         object-fit: cover;
         border-radius: 10px;
         display: block;
+        cursor: pointer;
+        transition: transform 0.2s, filter 0.2s;
+      }
+      .screenshot-slot img:hover {
+        transform: scale(1.02);
+        filter: brightness(0.95);
+      }
+      /* Lightbox modal */
+      .lightbox-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .lightbox-modal.active {
+        display: flex;
+      }
+      .lightbox-modal img {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .lightbox-modal .close-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border: none;
+        font-size: 1.8rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .lightbox-modal .close-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
       }
       /* How to play */
       .steps {
@@ -319,24 +369,26 @@
 
       <div class="card">
         <h3>Screenshots</h3>
+        <p style="color: #6b7280; font-size: 0.9rem; margin: 0 0 1rem 0;"><em>Screenshots from macOS version</em></p>
         <div class="screenshots-grid">
-          <div class="screenshot-slot">
-            <span class="slot-icon">📷</span>
-            <span>Gameplay — coming soon</span>
+          <div class="screenshot-slot" onclick="openLightbox('01_bible_stats.png', 'Bible Stats screen')">
+            <img src="images/01_bible_stats.png" alt="Bible Stats screen" />
           </div>
-          <div class="screenshot-slot">
-            <span class="slot-icon">📷</span>
-            <span>Main Menu — coming soon</span>
+          <div class="screenshot-slot" onclick="openLightbox('02_menu_start_button.png', 'Main Menu screen')">
+            <img src="images/02_menu_start_button.png" alt="Main Menu screen" />
           </div>
-          <div class="screenshot-slot">
-            <span class="slot-icon">📷</span>
-            <span>Settings — coming soon</span>
+          <div class="screenshot-slot" onclick="openLightbox('03_gameplay.png', 'Gameplay screen')">
+            <img src="images/03_gameplay.png" alt="Gameplay screen" />
           </div>
-          <div class="screenshot-slot">
-            <span class="slot-icon">📷</span>
-            <span>High Scores — coming soon</span>
+          <div class="screenshot-slot" onclick="openLightbox('04_ingame_settings.png', 'Settings screen')">
+            <img src="images/04_ingame_settings.png" alt="Settings screen" />
           </div>
         </div>
+      </div>
+
+      <div class="lightbox-modal" id="lightbox">
+        <button class="close-btn" onclick="closeLightbox()">✕</button>
+        <img id="lightbox-img" src="" alt="" />
       </div>
 
       <div class="card">
@@ -402,5 +454,34 @@
     </div>
 
     <footer class="footer">© 2026 Landex Development</footer>
+
+    <script>
+      function openLightbox(src, alt) {
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        img.src = 'images/' + src;
+        img.alt = alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    </script>
   </body>
 </html>
