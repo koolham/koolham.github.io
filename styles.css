@@ -85,6 +85,16 @@ h2 {
   list-style: disc inside;
 }
 
+.policy-list {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  color: #374151;
+}
+
+.policy-list li {
+  margin-bottom: 0.6rem;
+}
+
 .bio a {
   color: #2563eb;
   text-decoration: none;
@@ -157,6 +167,15 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+
+footer a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
 .game-image {
   width: 192px;
   height: 192px;
@@ -181,7 +200,10 @@ footer {
   margin-bottom: 1.5rem;
   padding: 1.2rem 1.2rem 1.2rem 1rem;
   gap: 1.2rem;
-  transition: box-shadow 0.2s, transform 0.2s, cursor 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s,
+    cursor 0.2s;
   border: 1px solid #e5e7eb;
   cursor: pointer;
 }

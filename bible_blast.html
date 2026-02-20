@@ -118,7 +118,9 @@
         font-weight: 600;
         font-size: 0.95rem;
         text-decoration: none;
-        transition: opacity 0.2s, transform 0.2s;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
         border: 2px solid transparent;
       }
       .store-btn:hover {
@@ -175,7 +177,9 @@
         border-radius: 10px;
         display: block;
         cursor: pointer;
-        transition: transform 0.2s, filter 0.2s;
+        transition:
+          transform 0.2s,
+          filter 0.2s;
       }
       .screenshot-slot img:hover {
         transform: scale(1.02);
@@ -322,8 +326,12 @@
             required.
           </p>
           <div class="store-buttons">
-            <a href="#" class="store-btn placeholder">🍎 App Store — Coming Soon</a>
-            <a href="#" class="store-btn placeholder">🤖 Google Play — Coming Soon</a>
+            <a href="#" class="store-btn placeholder"
+              >🍎 App Store — Coming Soon</a
+            >
+            <a href="#" class="store-btn placeholder"
+              >🤖 Google Play — Coming Soon</a
+            >
           </div>
         </div>
       </div>
@@ -369,18 +377,34 @@
 
       <div class="card">
         <h3>Screenshots</h3>
-        <p style="color: #6b7280; font-size: 0.9rem; margin: 0 0 1rem 0;"><em>Screenshots from macOS version</em></p>
+        <p style="color: #6b7280; font-size: 0.9rem; margin: 0 0 1rem 0">
+          <em>Screenshots from macOS version</em>
+        </p>
         <div class="screenshots-grid">
-          <div class="screenshot-slot" onclick="openLightbox('01_bible_stats.png', 'Bible Stats screen')">
+          <div
+            class="screenshot-slot"
+            onclick="openLightbox('01_bible_stats.png', 'Bible Stats screen')"
+          >
             <img src="images/01_bible_stats.png" alt="Bible Stats screen" />
           </div>
-          <div class="screenshot-slot" onclick="openLightbox('02_menu_start_button.png', 'Main Menu screen')">
+          <div
+            class="screenshot-slot"
+            onclick="
+              openLightbox('02_menu_start_button.png', 'Main Menu screen')
+            "
+          >
             <img src="images/02_menu_start_button.png" alt="Main Menu screen" />
           </div>
-          <div class="screenshot-slot" onclick="openLightbox('03_gameplay.png', 'Gameplay screen')">
+          <div
+            class="screenshot-slot"
+            onclick="openLightbox('03_gameplay.png', 'Gameplay screen')"
+          >
             <img src="images/03_gameplay.png" alt="Gameplay screen" />
           </div>
-          <div class="screenshot-slot" onclick="openLightbox('04_ingame_settings.png', 'Settings screen')">
+          <div
+            class="screenshot-slot"
+            onclick="openLightbox('04_ingame_settings.png', 'Settings screen')"
+          >
             <img src="images/04_ingame_settings.png" alt="Settings screen" />
           </div>
         </div>
@@ -431,15 +455,21 @@
           </div>
           <div class="tech-card">
             <div class="tech-name">Flame</div>
-            <div class="tech-desc">Game engine — game loop, components, collisions</div>
+            <div class="tech-desc">
+              Game engine — game loop, components, collisions
+            </div>
           </div>
           <div class="tech-card">
             <div class="tech-name">Riverpod</div>
-            <div class="tech-desc">State management across Flutter and Flame</div>
+            <div class="tech-desc">
+              State management across Flutter and Flame
+            </div>
           </div>
           <div class="tech-card">
             <div class="tech-name">Hive</div>
-            <div class="tech-desc">Local persistence for scores and settings</div>
+            <div class="tech-desc">
+              Local persistence for scores and settings
+            </div>
           </div>
           <div class="tech-card">
             <div class="tech-name">AudioPlayers</div>
@@ -453,32 +483,37 @@
       </div>
     </div>
 
-    <footer class="footer">© 2026 Landex Development</footer>
+    <footer class="footer">
+      © 2026 Landex Development ·
+      <a href="privacy_policy.html">Privacy Policy</a>
+    </footer>
 
     <script>
       function openLightbox(src, alt) {
-        const lightbox = document.getElementById('lightbox');
-        const img = document.getElementById('lightbox-img');
-        img.src = 'images/' + src;
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        img.src = "images/" + src;
         img.alt = alt;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
       }
 
       function closeLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        const lightbox = document.getElementById("lightbox");
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
       }
 
-      document.getElementById('lightbox').addEventListener('click', function(e) {
-        if (e.target === this) {
-          closeLightbox();
-        }
-      });
+      document
+        .getElementById("lightbox")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeLightbox();
+          }
+        });
 
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
           closeLightbox();
         }
       });
