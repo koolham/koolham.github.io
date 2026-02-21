@@ -7,10 +7,19 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <style>
+      .bible-blast-page {
+        background: radial-gradient(
+          circle at top,
+          #fef3c7 0%,
+          #f8fafc 38%,
+          #e0f2fe 100%
+        );
+        color: #1f2937;
+      }
       .back-link {
         display: inline-block;
         margin-bottom: 1.5rem;
-        color: #2563eb;
+        color: #1f6f8b;
         text-decoration: none;
         font-size: 0.95rem;
       }
@@ -18,14 +27,15 @@
         text-decoration: underline;
       }
       .game-hero {
-        background: #fff;
+        background: #fffaf0;
         border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 22px rgba(15, 42, 68, 0.12);
         padding: 2rem;
         margin-bottom: 2rem;
         display: flex;
         gap: 2rem;
         align-items: flex-start;
+        border: 1px solid #fde68a;
       }
       .game-hero-logo {
         width: 180px;
@@ -38,11 +48,11 @@
       .game-hero-text h2 {
         margin: 0 0 0.4rem 0;
         font-size: 1.9rem;
-        color: #1e3a8a;
+        color: #0f2a44;
         font-weight: 700;
       }
       .game-hero-text .tagline {
-        color: #6b7280;
+        color: #475569;
         font-size: 1.05rem;
         margin: 0 0 1rem 0;
       }
@@ -53,31 +63,32 @@
         margin-bottom: 1rem;
       }
       .badge {
-        background: #e0e7ff;
-        color: #3730a3;
+        background: #fde68a;
+        color: #7c2d12;
         border-radius: 999px;
         padding: 0.25rem 0.85rem;
         font-size: 0.82rem;
         font-weight: 600;
       }
       .card {
-        background: #fff;
+        background: #fffaf0;
         border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 22px rgba(15, 42, 68, 0.12);
         padding: 2rem;
         margin-bottom: 2rem;
+        border: 1px solid #fde68a;
       }
       .card h3 {
         margin-top: 0;
         margin-bottom: 0.9rem;
         font-size: 1.35rem;
-        color: #1e3a8a;
+        color: #0f2a44;
         font-weight: 600;
       }
       .card ul {
         margin: 0;
         padding-left: 1.3rem;
-        color: #374151;
+        color: #334155;
       }
       .card ul li {
         margin-bottom: 0.45rem;
@@ -88,14 +99,14 @@
         gap: 1rem;
       }
       .tech-card {
-        background: linear-gradient(120deg, #f0f4ff 60%, #e0e7ff 100%);
-        border: 1px solid #e5e7eb;
+        background: linear-gradient(120deg, #fff7e8 60%, #fde68a 100%);
+        border: 1px solid #fcd34d;
         border-radius: 10px;
         padding: 0.9rem 1rem;
       }
       .tech-card .tech-name {
         font-weight: 700;
-        color: #1e3a8a;
+        color: #0f2a44;
         font-size: 0.95rem;
       }
       .tech-card .tech-desc {
@@ -129,17 +140,17 @@
         transform: scale(1.03);
       }
       .store-btn.ios {
-        background: #1e3a8a;
+        background: #0f2a44;
         color: #fff;
       }
       .store-btn.android {
-        background: #166534;
+        background: #1f6f8b;
         color: #fff;
       }
       .store-btn.placeholder {
-        background: #f3f4f6;
-        color: #9ca3af;
-        border-color: #e5e7eb;
+        background: #fff7e8;
+        color: #92400e;
+        border-color: #fde68a;
         cursor: not-allowed;
         font-style: italic;
       }
@@ -155,14 +166,14 @@
       }
       .screenshot-slot {
         aspect-ratio: 9 / 16;
-        background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
-        border: 2px dashed #a5b4fc;
+        background: linear-gradient(135deg, #fff7e8 0%, #e0f2fe 100%);
+        border: 2px dashed #f59e0b;
         border-radius: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: #818cf8;
+        color: #b45309;
         font-size: 0.85rem;
         font-style: italic;
         gap: 0.5rem;
@@ -248,8 +259,8 @@
         flex-shrink: 0;
         width: 2rem;
         height: 2rem;
-        background: #1e3a8a;
-        color: #fff;
+        background: #f59e0b;
+        color: #1f2937;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -259,11 +270,11 @@
       }
       .step-text strong {
         display: block;
-        color: #1e3a8a;
+        color: #0f2a44;
         margin-bottom: 0.15rem;
       }
       .step-text {
-        color: #374151;
+        color: #334155;
         font-size: 0.97rem;
         padding-top: 0.2rem;
       }
@@ -283,7 +294,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bible-blast-page">
     <header>
       <div class="header-inner">
         <div class="header-flex">
