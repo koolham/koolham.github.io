@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
+  <!-- Blue circuit board background -->
+  <rect width="512" height="256" fill="#1e5a96"/>
+  
+  <!-- Subtle circuit board shading pattern -->
+  <g opacity="0.15" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round">
+    <!-- Top-left area circuits -->
+    <line x1="20" y1="50" x2="50" y2="50"/>
+    <line x1="50" y1="50" x2="50" y2="80"/>
+    <line x1="35" y1="20" x2="35" y2="40"/>
+    
+    <!-- Center circuits -->
+    <line x1="140" y1="30" x2="180" y2="30"/>
+    <line x1="180" y1="30" x2="180" y2="70"/>
+    <line x1="120" y1="120" x2="140" y2="120"/>
+    <line x1="140" y1="120" x2="140" y2="150"/>
+    
+    <!-- Bottom-right area circuits -->
+    <line x1="210" y1="180" x2="240" y2="180"/>
+    <line x1="240" y1="180" x2="240" y2="210"/>
+    <line x1="220" y1="220" x2="220" y2="240"/>
+  </g>
+  
+  <!-- Prominent circuit board lines -->
+  <g stroke="#4a9fd8" stroke-width="6" fill="none" stroke-linecap="round">
+    <!-- Top-right circuit -->
+    <circle cx="220" cy="30" r="10"/>
+    <line x1="220" y1="40" x2="220" y2="65"/>
+    <circle cx="220" cy="75" r="10"/>
+    <line x1="210" y1="75" x2="180" y2="75"/>
+    <line x1="180" y1="75" x2="180" y2="95"/>
+    <circle cx="180" cy="105" r="10"/>
+    
+    <!-- Left-bottom circuit -->
+    <circle cx="35" cy="210" r="10"/>
+    <line x1="35" y1="220" x2="35" y2="240"/>
+    <line x1="45" y1="210" x2="75" y2="210"/>
+    <circle cx="85" cy="210" r="10"/>
+    <line x1="85" y1="200" x2="85" y2="175"/>
+  </g>
+  
+  <!-- Stylized "L" with tech elements -->
+  <g fill="#ffffff">
+    <!-- Main L shape -->
+    <rect x="60" y="40" width="40" height="140" rx="8"/>
+    <rect x="60" y="160" width="100" height="40" rx="8"/>
+    
+    <!-- Tech accent - small circuits -->
+    <circle cx="175" cy="55" r="7" fill="#4a9fd8"/>
+    <rect x="173" y="65" width="5" height="30" fill="#4a9fd8"/>
+    <circle cx="175" cy="102" r="7" fill="#4a9fd8"/>
+  </g>
+</svg>
