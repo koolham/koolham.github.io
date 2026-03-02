@@ -334,10 +334,11 @@
           </div>
           <p>
             A relaxing virtual pet experience where you care for hamsters in a
-            pixel-art cage. Feed, water, exercise, and clean up after your
-            fuzzy companions — but keep them alive, or it's game over. The free
-            version includes one hamster; upgrade to the full version for three
-            customizable hamsters with full personality selection.
+            pixel-art cage. Feed, water, exercise, and clean up after your fuzzy
+            companions — but keep them alive, or it's game over. The free
+            version includes one hamster with a 10-minute session limit; upgrade
+            to the full version for unlimited play with two customizable
+            hamsters and full personality selection.
           </p>
           <div class="store-buttons">
             <a href="#" class="store-btn placeholder"
@@ -346,9 +347,7 @@
             <a href="#" class="store-btn placeholder"
               >🤖 Google Play — Coming Soon</a
             >
-            <a href="#" class="store-btn placeholder"
-              >🖥️ macOS — Coming Soon</a
-            >
+            <a href="#" class="store-btn placeholder">🖥️ macOS — Coming Soon</a>
           </div>
         </div>
       </div>
@@ -361,7 +360,8 @@
             <div class="step-text">
               <strong>Create your hamsters</strong>
               Name, customize the color, and choose the personality for each
-              hamster. (Full version only — free version has one random hamster)
+              hamster. (Full version only — free version has one random hamster
+              and a 10-minute session limit)
             </div>
           </li>
           <li class="step">
@@ -369,16 +369,17 @@
             <div class="step-text">
               <strong>Keep them alive</strong>
               Monitor hunger, thirst, energy, stress, sickness, and age. Tap the
-              food bowl to feed or water bottle to hydrate when their stats drop.
+              food bowl to feed or water bottle to hydrate when their stats
+              drop.
             </div>
           </li>
           <li class="step">
             <div class="step-number">3</div>
             <div class="step-text">
               <strong>Manage their wellbeing</strong>
-              Let them run on the wheel for exercise, turn off lights to help
-              them sleep, tap them to reduce stress, and clean the cage to
-              prevent sickness spread.
+              Hamsters exercise spontaneously — turn off lights to help them
+              sleep faster, tap them to reduce stress, and double-tap poop to
+              clean the cage and prevent sickness spread.
             </div>
           </li>
           <li class="step">
@@ -400,15 +401,28 @@
         <div class="screenshots-grid">
           <div
             class="screenshot-slot"
-            onclick="openLightbox('01_hamster_gameplay.png', 'Free Version Gameplay')"
+            onclick="
+              openLightbox(
+                '01_gameplay_free_version.png',
+                'Free Version Gameplay',
+              )
+            "
           >
-            <img src="images/01_hamster_gameplay.png" alt="Free Version Gameplay" />
+            <img
+              src="images/01_gameplay_free_version.png"
+              alt="Free Version Gameplay"
+            />
           </div>
           <div
             class="screenshot-slot"
-            onclick="openLightbox('02_hamster_settings.png', 'Settings Overlay')"
+            onclick="
+              openLightbox('02_settings_overlay_free.png', 'Settings Overlay')
+            "
           >
-            <img src="images/02_hamster_settings.png" alt="Settings Overlay" />
+            <img
+              src="images/02_settings_overlay_free.png"
+              alt="Settings Overlay"
+            />
           </div>
         </div>
       </div>
@@ -423,8 +437,9 @@
         <ul>
           <li>
             <strong>Free vs Full Version</strong> — Free includes one hamster
-            with random properties; full version unlocks three hamsters with
-            full customisation (name, color, personality)
+            with random properties and a 10-minute session limit; full version
+            unlocks unlimited play with two hamsters and full customisation
+            (name, color, personality)
           </li>
           <li>
             <strong>Real-Time Pet Stats</strong> — Hunger, thirst, energy,
@@ -433,8 +448,8 @@
           </li>
           <li>
             <strong>Interactive Gameplay</strong> — Tap to feed, tap to water,
-            drag items around, turn lights on/off, clean poop, and pet hamsters
-            to reduce stress
+            drag the food bowl to reposition it, double-tap poop to clean it up,
+            turn lights on/off, and pet hamsters to reduce stress
           </li>
           <li>
             <strong>Multiple Animations</strong> — Walking, running, sleeping,
@@ -476,11 +491,15 @@
           </div>
           <div class="tech-card">
             <div class="tech-name">In-App Purchase</div>
-            <div class="tech-desc">iOS/macOS App Store & Android Google Play</div>
+            <div class="tech-desc">
+              iOS/macOS App Store & Android Google Play
+            </div>
           </div>
           <div class="tech-card">
             <div class="tech-name">SharedPreferences</div>
-            <div class="tech-desc">Local persistence for game state and settings</div>
+            <div class="tech-desc">
+              Local persistence for game state and settings
+            </div>
           </div>
           <div class="tech-card">
             <div class="tech-name">Procedural Art</div>
