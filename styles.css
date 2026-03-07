@@ -334,10 +334,23 @@ footer a:hover {
   .bio {
     padding: 1.5rem;
   }
+  .links {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
   .links a {
-    display: block;
-    margin: 0.8rem 0;
-    padding: 0.8rem 1.5rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0.6rem 1.2rem;
+  }
+  .donate-button {
+    position: static;
+    margin: 1rem 0 0 0;
+    text-align: right;
   }
   .game-item {
     flex-direction: column;
@@ -376,5 +389,6 @@ footer a:hover {
   }
   .header-title h1 {
     font-size: 1.2rem;
+    max-width: 9.5rem;
   }
 }
