@@ -7,32 +7,41 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="canonical" href="https://www.landex.dev/bible_blast.html" />
-    <meta name="description" content="Bible Blast is a fast-paced scripture challenge game built with Flutter and Flame. Test your biblical knowledge with dynamic verse puzzles, high score tracking, and offline gameplay. Coming soon to iOS, Android, and macOS." />
+    <meta
+      name="description"
+      content="Bible Blast is a fast-paced scripture challenge game built with Flutter and Flame. Test your biblical knowledge with dynamic verse puzzles, high score tracking, and offline gameplay. Coming soon to iOS, Android, and macOS."
+    />
     <meta name="author" content="Ian Lander" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Bible Blast – Landex Development" />
-    <meta property="og:description" content="A fast-paced arcade-style scripture challenge game. Test your biblical knowledge with dynamic verse puzzles, offline gameplay, and persistent high score tracking." />
+    <meta
+      property="og:description"
+      content="A fast-paced arcade-style scripture challenge game. Test your biblical knowledge with dynamic verse puzzles, offline gameplay, and persistent high score tracking."
+    />
     <meta property="og:url" content="https://www.landex.dev/bible_blast.html" />
-    <meta property="og:image" content="https://www.landex.dev/images/bible_blast_logo.png" />
+    <meta
+      property="og:image"
+      content="https://www.landex.dev/images/bible_blast_logo.png"
+    />
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Bible Blast",
-      "operatingSystem": "iOS, Android, macOS",
-      "applicationCategory": "GameApplication",
-      "description": "A fast-paced arcade-style scripture challenge game built with Flutter and Flame. Features dynamic Bible verse puzzles, offline gameplay, and persistent high score tracking.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Landex Development",
-        "url": "https://www.landex.dev/"
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Bible Blast",
+        "operatingSystem": "iOS, Android, macOS",
+        "applicationCategory": "GameApplication",
+        "description": "A fast-paced arcade-style scripture challenge game built with Flutter and Flame. Features dynamic Bible verse puzzles, offline gameplay, and persistent high score tracking.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Landex Development",
+          "url": "https://www.landex.dev/"
+        }
       }
-    }
     </script>
     <style>
       .bible-blast-page {
@@ -185,6 +194,15 @@
       .store-btn.placeholder:hover {
         opacity: 1;
         transform: none;
+      }
+      .store-btn.badge {
+        padding: 0;
+        background: none;
+        border: none;
+      }
+      .store-btn.badge img {
+        height: 44px;
+        display: block;
       }
       /* Screenshots */
       .screenshots-grid {
@@ -368,9 +386,16 @@
             required.
           </p>
           <div class="store-buttons">
-            <a href="#" class="store-btn placeholder"
-              >🍎 App Store — Coming Soon</a
-            >
+            <a
+              href="https://apps.apple.com/us/app/bible-blast/id6759405078"
+              class="store-btn badge"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="images/app-store-icon.png"
+                alt="Download on the App Store"
+            /></a>
+            <a href="#" class="store-btn placeholder">🖥️ macOS — Coming Soon</a>
             <a href="#" class="store-btn placeholder"
               >🤖 Google Play — Coming Soon</a
             >
