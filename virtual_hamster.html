@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://www.landex.dev/virtual_hamster.html" />
     <meta
       name="description"
-      content="Virtual Hamster is a cozy virtual pet game built with Flutter and Flame. Care for adorable pixel-art hamsters — feed, water, exercise, and clean up. Freemium with in-app purchase. Coming soon to iOS, Android, and macOS."
+      content="Virtual Hamster is a cozy virtual pet game built with Flutter and Flame. Care for adorable pixel-art hamsters — feed, water, exercise, and clean up. Freemium with in-app purchase. Available on iOS, Android, and macOS."
     />
     <meta name="author" content="Ian Lander" />
     <meta property="og:type" content="website" />
@@ -199,12 +199,13 @@
         transform: none;
       }
       .store-btn.badge {
-        padding: 0;
+        padding: 6px 10px;
         background: none;
-        border: none;
+        border: 2px solid #6d28d9;
+        border-radius: 10px;
       }
       .store-btn.badge img {
-        height: 44px;
+        height: 60px;
         display: block;
       }
       /* How to play */
@@ -395,11 +396,17 @@
               class="store-btn badge"
               target="_blank"
               rel="noopener"
-              ><img
-                src="images/app-store-icon.png"
-                alt="Download on the App Store"
+              ><img src="images/ios-logo.png" alt="Download on the App Store"
             /></a>
-            <a href="#" class="store-btn placeholder">🖥️ macOS — Coming Soon</a>
+            <a
+              href="https://apps.apple.com/app/virtualhamster/id6759629384"
+              class="store-btn badge"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="images/macos-logo.png"
+                alt="Download on the Mac App Store"
+            /></a>
             <a href="#" class="store-btn placeholder"
               >🤖 Google Play — Coming Soon</a
             >
