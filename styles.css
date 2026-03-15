@@ -489,6 +489,139 @@ footer a:hover {
   color: #4b5563;
 }
 
+.support-page {
+  background: radial-gradient(
+    circle at top,
+    #d1fae5 0%,
+    #f8fafc 38%,
+    #ccfbf1 100%
+  );
+  color: #1f2937;
+}
+
+.support-page .support-hero,
+.support-page .games,
+.support-page .tech-section {
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  box-shadow: 0 10px 22px rgba(15, 42, 68, 0.12);
+}
+
+.support-page .support-hero {
+  padding-top: 2.25rem;
+}
+
+.support-hero-layout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.support-hero-copy {
+  flex: 1 1 65%;
+}
+
+.support-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.support-chip {
+  background: #99f6e4;
+  color: #134e4a;
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.support-hero-panel {
+  flex: 1 1 35%;
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  border-radius: 12px;
+  padding: 1rem;
+  align-self: flex-start;
+}
+
+.support-hero-panel h4 {
+  margin: 0 0 0.5rem 0;
+  color: #115e59;
+  font-size: 1rem;
+}
+
+.support-quick-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #334155;
+}
+
+.support-quick-list li {
+  margin-bottom: 0.4rem;
+}
+
+.support-page .bio h3,
+.support-page .games h3,
+.support-page .tech-section h3 {
+  color: #115e59;
+}
+
+.support-page .links a {
+  background-color: #0f766e;
+}
+
+.support-page .links a:hover {
+  background-color: #115e59;
+}
+
+.support-page .support-intro {
+  color: #334155;
+}
+
+.support-page .support-status {
+  background: #ecfeff;
+  border-color: #67e8f9;
+  color: #155e75;
+}
+
+.support-page .support-form label,
+.support-page .support-preview h4,
+.support-page .support-card h4 {
+  color: #0f766e;
+}
+
+.support-page .support-form input:focus,
+.support-page .support-form select:focus,
+.support-page .support-form textarea:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.16);
+}
+
+.support-page .support-button {
+  background: #0f766e;
+}
+
+.support-page .support-button:hover {
+  background: #115e59;
+}
+
+.support-page .support-button-secondary {
+  background: #ccfbf1;
+  color: #134e4a;
+}
+
+.support-page .support-button-secondary:hover {
+  background: #99f6e4;
+}
+
+.support-page .support-preview,
+.support-page .support-card {
+  background: #f0fdfa;
+  border-color: #99f6e4;
+}
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -550,6 +683,19 @@ footer a:hover {
   .support-form-actions {
     flex-direction: column;
   }
+
+  .support-hero-layout {
+    flex-direction: column;
+  }
+
+  .support-page .support-hero {
+    padding-top: 1.5rem;
+  }
+
+  .support-hero-panel {
+    align-self: stretch;
+  }
+
   .support-button {
     width: 100%;
   }

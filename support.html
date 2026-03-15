@@ -9,11 +9,11 @@
     <link rel="canonical" href="https://www.landex.dev/support.html" />
     <meta
       name="description"
-      content="Support for Bible Blast and Virtual Hamster. Get help with gameplay issues, bugs, store problems, and contact Landex Development."
+      content="Support for Bible Blast and Virtual Hamster. Get help with gameplay issues, bugs, install problems, and contact Landex Development."
     />
     <meta name="author" content="Ian Lander" />
   </head>
-  <body>
+  <body class="support-page">
     <header>
       <div class="header-inner">
         <div class="header-flex">
@@ -30,33 +30,52 @@
     </header>
 
     <div class="container">
-      <div class="bio">
+      <div class="bio support-hero">
         <div class="links">
           <a href="index.html">Home</a>
           <a href="privacy_policy.html">Privacy Policy</a>
         </div>
         <h3>Support</h3>
-        <div class="support-status" id="support-status" hidden>
-          Your support request was submitted. If this is the first time using
-          the hosted form destination, FormSubmit may send an activation email
-          to finalize delivery.
+        <div class="support-hero-layout">
+          <div class="support-hero-copy">
+            <div class="support-status" id="support-status" hidden>
+              Your support request was submitted. If this is the first time
+              using the hosted form destination, FormSubmit may send an
+              activation email to finalize delivery.
+            </div>
+            <p>
+              If you need help with <strong>Bible Blast</strong> or
+              <strong>Virtual Hamster</strong>, use this page as your main
+              support contact point.
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a
+                href="mailto:ian@landex.dev?subject=Landex%20Development%20Support"
+                >ian@landex.dev</a
+              >
+            </p>
+            <p>
+              For the fastest response, include the game name, your device
+              model, operating system version, a short description of the
+              problem, and any steps that reproduce it.
+            </p>
+            <div class="support-chip-row" aria-label="Active issue categories">
+              <span class="support-chip">Bug Reports</span>
+              <span class="support-chip">Gameplay Questions</span>
+              <span class="support-chip">Download / Install</span>
+              <span class="support-chip">Feature Requests</span>
+            </div>
+          </div>
+          <aside class="support-hero-panel">
+            <h4>Quick Start</h4>
+            <ul class="support-quick-list">
+              <li>Choose game and issue type in the form.</li>
+              <li>Describe what happened and expected behavior.</li>
+              <li>Add platform and version details before sending.</li>
+            </ul>
+          </aside>
         </div>
-        <p>
-          If you need help with <strong>Bible Blast</strong> or
-          <strong>Virtual Hamster</strong>, use this page as your main support
-          contact point.
-        </p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:ian@landex.dev?subject=Landex%20Development%20Support"
-            >ian@landex.dev</a
-          >
-        </p>
-        <p>
-          For the fastest response, include the game name, your device model,
-          operating system version, a short description of the problem, and any
-          steps that reproduce it.
-        </p>
       </div>
 
       <section class="games support-section">
@@ -111,15 +130,14 @@
               Issue Type
               <select name="issueType" required>
                 <option value="">Select an issue type</option>
-                <option value="Bug Report">Bug Report</option>
-                <option value="Gameplay Question">Gameplay Question</option>
-                <option value="General Feedback">General Feedback</option>
-                <option value="Feature Request">Feature Request</option>
-                <option value="Purchase Problem">Purchase Problem</option>
-                <option value="Download / Install Problem">
-                  Download / Install Problem
+                <option value="Bug Reports">Bug Reports</option>
+                <option value="Gameplay Questions">Gameplay Questions</option>
+                <option value="Download Or Install Problems">
+                  Download Or Install Problems
                 </option>
-                <option value="Other">Other</option>
+                <option value="Feature Requests">Feature Requests</option>
+                <option value="General Feedback">General Feedback</option>
+                <option value="Privacy Questions">Privacy Questions</option>
               </select>
             </label>
             <label>
@@ -222,8 +240,8 @@
           <div class="support-card">
             <h4>Virtual Hamster</h4>
             <p>
-              Report pet behavior issues, save data problems, purchase-related
-              questions, or bugs affecting progression.
+              Report pet behavior issues, save data problems, or bugs affecting
+              progression.
             </p>
           </div>
           <div class="support-card">
@@ -240,10 +258,10 @@
         <h3>Common Support Topics</h3>
         <div class="support-grid">
           <div class="support-card">
-            <h4>App Won't Open Or Update</h4>
+            <h4>Gameplay Questions</h4>
             <p>
-              Make sure your device is up to date, fully restart it, and try
-              downloading the latest version again from the store.
+              Ask about mechanics, controls, progression, or expected gameplay
+              behavior and include what you are trying to do.
             </p>
           </div>
           <div class="support-card">
@@ -254,11 +272,24 @@
             </p>
           </div>
           <div class="support-card">
-            <h4>Purchase Or Download Problems</h4>
+            <h4>Download Or Install Problems</h4>
             <p>
-              If the store reports a problem with a download or purchase,
-              include the platform, store receipt or order details, and a
-              screenshot if available.
+              If a build will not install or open, include your platform,
+              version, exact error message, and a screenshot if available.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Feature Requests</h4>
+            <p>
+              Share the feature idea, why it is useful, and where it fits in
+              your current game flow.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>General Feedback</h4>
+            <p>
+              Send overall impressions, balancing thoughts, and quality
+              suggestions that are not tied to a specific bug.
             </p>
           </div>
           <div class="support-card">
