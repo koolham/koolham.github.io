@@ -76,6 +76,25 @@
         gap: 2rem;
         align-items: flex-start;
         border: 1px solid #e9d5ff;
+        position: relative;
+      }
+      .hero-support-link {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        background: #6d28d9;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      .hero-support-link:hover {
+        opacity: 0.9;
       }
       .game-hero-logo {
         width: 180px;
@@ -176,6 +195,11 @@
       .store-btn.placeholder:hover {
         opacity: 1;
         transform: none;
+      }
+      .store-btn.support {
+        background: #6d28d9;
+        color: #fff;
+        border-color: #6d28d9;
       }
       .store-btn.badge {
         padding: 6px 10px;
@@ -313,6 +337,10 @@
           align-items: center;
           text-align: center;
         }
+        .hero-support-link {
+          position: static;
+          margin-bottom: 0.75rem;
+        }
         .badge-row {
           justify-content: center;
         }
@@ -343,6 +371,9 @@
       <a href="index.html" class="back-link">← Back to Portfolio</a>
 
       <div class="game-hero">
+        <a href="support.html?game=Virtual%20Hamster" class="hero-support-link"
+          >🛟 Support</a
+        >
         <img
           src="images/virtual_hamster_logo.png"
           alt="Virtual Hamster logo"
@@ -354,12 +385,12 @@
             A cozy virtual pet game — care for adorable pixel-art hamsters
           </p>
           <div class="badge-row">
-            <span class="badge">Flutter</span>
-            <span class="badge">Flame</span>
-            <span class="badge">In-App Purchase</span>
-            <span class="badge">Pixel Art</span>
-            <span class="badge">Freemium</span>
-            <span class="badge">Cross-platform</span>
+            <span class="badge">Gentle Pet Care</span>
+            <span class="badge">Adorable Hamsters</span>
+            <span class="badge">Cozy Pixel World</span>
+            <span class="badge">Calm Gameplay</span>
+            <span class="badge">Family Friendly</span>
+            <span class="badge">Easy To Pick Up</span>
           </div>
           <p>
             A relaxing virtual pet experience where you care for hamsters in a
