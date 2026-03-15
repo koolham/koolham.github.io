@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support | Landex Development</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="canonical" href="https://www.landex.dev/support.html" />
+    <meta
+      name="description"
+      content="Support for Bible Blast and Virtual Hamster. Get help with gameplay issues, bugs, store problems, and contact Landex Development."
+    />
+    <meta name="author" content="Ian Lander" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-flex">
+          <img
+            src="header-banner.svg"
+            alt="Landex Development Logo"
+            class="site-logo"
+          />
+        </div>
+        <div class="header-title">
+          <h1>Landex Development</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="bio">
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="privacy_policy.html">Privacy Policy</a>
+        </div>
+        <h3>Support</h3>
+        <div class="support-status" id="support-status" hidden>
+          Your support request was submitted. If this is the first time using
+          the hosted form destination, FormSubmit may send an activation email
+          to finalize delivery.
+        </div>
+        <p>
+          If you need help with <strong>Bible Blast</strong> or
+          <strong>Virtual Hamster</strong>, use this page as your main support
+          contact point.
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:ian@landex.dev?subject=Landex%20Development%20Support"
+            >ian@landex.dev</a
+          >
+        </p>
+        <p>
+          For the fastest response, include the game name, your device model,
+          operating system version, a short description of the problem, and any
+          steps that reproduce it.
+        </p>
+      </div>
+
+      <section class="games support-section">
+        <h3>Support Request Form</h3>
+        <p class="support-intro">
+          Fill this out to submit a support request directly. The form also
+          generates a structured support summary before submission.
+        </p>
+        <form
+          class="support-form"
+          id="support-form"
+          action="https://formsubmit.co/ian@landex.dev"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" id="form-subject" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://www.landex.dev/support.html?submitted=1"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="support-honeypot" />
+          <textarea
+            name="supportSummary"
+            id="support-summary"
+            class="support-honeypot"
+            tabindex="-1"
+            aria-hidden="true"
+          ></textarea>
+          <div class="support-form-grid">
+            <label>
+              Your Email
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+              />
+            </label>
+            <label>
+              Game
+              <select name="game" required>
+                <option value="">Select a game</option>
+                <option value="Bible Blast">Bible Blast</option>
+                <option value="Virtual Hamster">Virtual Hamster</option>
+                <option value="Landex Development Website">Website</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label>
+              Issue Type
+              <select name="issueType" required>
+                <option value="">Select an issue type</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Gameplay Question">Gameplay Question</option>
+                <option value="General Feedback">General Feedback</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Purchase Problem">Purchase Problem</option>
+                <option value="Download / Install Problem">
+                  Download / Install Problem
+                </option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label>
+              Platform
+              <select name="platform" required>
+                <option value="">Select a platform</option>
+                <option value="iPhone">iPhone</option>
+                <option value="iPad">iPad</option>
+                <option value="Android">Android</option>
+                <option value="macOS">macOS</option>
+                <option value="Website">Website</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label>
+              App Version
+              <input
+                type="text"
+                name="appVersion"
+                placeholder="Example: 1.0.2"
+              />
+            </label>
+            <label>
+              Device Model
+              <input
+                type="text"
+                name="deviceModel"
+                placeholder="Example: iPhone 15 Pro"
+              />
+            </label>
+            <label>
+              OS Version
+              <input
+                type="text"
+                name="osVersion"
+                placeholder="Example: iOS 18.3"
+              />
+            </label>
+          </div>
+
+          <label>
+            What Happened?
+            <textarea
+              name="problem"
+              rows="5"
+              required
+              placeholder="Describe the issue clearly."
+            ></textarea>
+          </label>
+
+          <label>
+            Steps To Reproduce
+            <textarea
+              name="steps"
+              rows="5"
+              placeholder="List the steps that cause the issue, one per line."
+            ></textarea>
+          </label>
+
+          <label>
+            Additional Details
+            <textarea
+              name="details"
+              rows="4"
+              placeholder="Anything else that would help diagnose the problem."
+            ></textarea>
+          </label>
+
+          <div class="support-form-actions">
+            <button type="submit" class="support-button">
+              Send Support Request
+            </button>
+            <button
+              type="button"
+              class="support-button support-button-secondary"
+              id="copy-email"
+            >
+              Copy Support Summary
+            </button>
+          </div>
+
+          <div class="support-preview" id="support-preview" hidden>
+            <h4>Support Summary Preview</h4>
+            <p><strong>Subject:</strong> <span id="preview-subject"></span></p>
+            <pre id="preview-body"></pre>
+          </div>
+        </form>
+      </section>
+
+      <section class="games support-section">
+        <h3>What To Include</h3>
+        <div class="support-grid">
+          <div class="support-card">
+            <h4>Bible Blast</h4>
+            <p>
+              Report gameplay bugs, scoring problems, controller issues, or
+              anything unusual you encounter while playing.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Virtual Hamster</h4>
+            <p>
+              Report pet behavior issues, save data problems, purchase-related
+              questions, or bugs affecting progression.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Store And Device Details</h4>
+            <p>
+              Include whether you are on iPhone, iPad, Android, or macOS, plus
+              the app version and where you downloaded it from.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tech-section support-section">
+        <h3>Common Support Topics</h3>
+        <div class="support-grid">
+          <div class="support-card">
+            <h4>App Won't Open Or Update</h4>
+            <p>
+              Make sure your device is up to date, fully restart it, and try
+              downloading the latest version again from the store.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Bug Reports</h4>
+            <p>
+              Send the exact steps that caused the issue, what you expected to
+              happen, and what happened instead.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Purchase Or Download Problems</h4>
+            <p>
+              If the store reports a problem with a download or purchase,
+              include the platform, store receipt or order details, and a
+              screenshot if available.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Privacy Questions</h4>
+            <p>
+              For data handling and privacy details, review the
+              <a href="privacy_policy.html">Privacy Policy</a> or email support
+              directly.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      © 2026 Landex Development ·
+      <a href="privacy_policy.html">Privacy Policy</a> ·
+      <a href="support.html">Support</a>
+    </footer>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const supportForm = document.getElementById("support-form");
+      const supportPreview = document.getElementById("support-preview");
+      const previewSubject = document.getElementById("preview-subject");
+      const previewBody = document.getElementById("preview-body");
+      const copyEmailButton = document.getElementById("copy-email");
+      const formSubject = document.getElementById("form-subject");
+      const supportSummary = document.getElementById("support-summary");
+      const supportStatus = document.getElementById("support-status");
+
+      function getFieldValue(formData, key) {
+        const value = formData.get(key);
+        return typeof value === "string" ? value.trim() : "";
+      }
+
+      function buildSupportEmail() {
+        const formData = new FormData(supportForm);
+        const game = getFieldValue(formData, "game");
+        const issueType = getFieldValue(formData, "issueType");
+        const platform = getFieldValue(formData, "platform");
+        const emailAddress = getFieldValue(formData, "email") || "Not provided";
+        const appVersion =
+          getFieldValue(formData, "appVersion") || "Not provided";
+        const deviceModel =
+          getFieldValue(formData, "deviceModel") || "Not provided";
+        const osVersion =
+          getFieldValue(formData, "osVersion") || "Not provided";
+        const problem = getFieldValue(formData, "problem");
+        const steps = getFieldValue(formData, "steps") || "Not provided";
+        const details = getFieldValue(formData, "details") || "None";
+
+        const subject = ["Support", game, issueType]
+          .filter(Boolean)
+          .join(" | ");
+        const body = [
+          "Hello,",
+          "",
+          "I need help with the following issue:",
+          "",
+          "Reply Email: " + emailAddress,
+          "Game: " + game,
+          "Issue Type: " + issueType,
+          "Platform: " + platform,
+          "App Version: " + appVersion,
+          "Device Model: " + deviceModel,
+          "OS Version: " + osVersion,
+          "",
+          "What Happened:",
+          problem,
+          "",
+          "Steps To Reproduce:",
+          steps,
+          "",
+          "Additional Details:",
+          details,
+          "",
+          "Thank you,",
+        ].join("\n");
+
+        return { subject, body };
+      }
+
+      function updatePreview() {
+        if (!supportForm.reportValidity()) {
+          return null;
+        }
+
+        const email = buildSupportEmail();
+        previewSubject.textContent = email.subject;
+        previewBody.textContent = email.body;
+        supportPreview.hidden = false;
+        return email;
+      }
+
+      function prefillFromQuery() {
+        const prefilledGame = urlParams.get("game");
+        const prefilledPlatform = urlParams.get("platform");
+        const gameField = supportForm.elements.namedItem("game");
+        const platformField = supportForm.elements.namedItem("platform");
+
+        if (prefilledGame && gameField) {
+          gameField.value = prefilledGame;
+        }
+
+        if (prefilledPlatform && platformField) {
+          platformField.value = prefilledPlatform;
+        }
+
+        if (urlParams.get("submitted") === "1") {
+          supportStatus.hidden = false;
+        }
+      }
+
+      supportForm.addEventListener("submit", function (event) {
+        const email = updatePreview();
+
+        if (!email) {
+          event.preventDefault();
+          return;
+        }
+
+        formSubject.value = email.subject;
+        supportSummary.value = email.body;
+      });
+
+      copyEmailButton.addEventListener("click", async function () {
+        const email = updatePreview();
+
+        if (!email) {
+          return;
+        }
+
+        const text = "Subject: " + email.subject + "\n\n" + email.body;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          copyEmailButton.textContent = "Copied";
+          window.setTimeout(function () {
+            copyEmailButton.textContent = "Copy Support Summary";
+          }, 1500);
+          return;
+        }
+
+        previewBody.focus();
+      });
+
+      prefillFromQuery();
+    </script>
+  </body>
+</html>
