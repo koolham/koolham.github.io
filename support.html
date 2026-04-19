@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://www.landex.dev/support.html" />
     <meta
       name="description"
-      content="Support for Bible Blast and Virtual Hamster. Get help with gameplay issues, bugs, install problems, and contact Landex Development."
+      content="Support for Bible Blast, Virtual Hamster, and Chronicles of Faith. Get help with gameplay issues, bugs, install problems, and contact Landex Development."
     />
     <meta name="author" content="Ian Lander" />
     <!-- Google tag (gtag.js) -->
@@ -59,7 +59,8 @@
             </div>
             <p>
               If you need help with <strong>Bible Blast</strong> or
-              <strong>Virtual Hamster</strong>, use this page as your main
+              <strong>Virtual Hamster</strong> or
+              <strong>Chronicles of Faith</strong>, use this page as your main
               support contact point.
             </p>
             <p>
@@ -136,6 +137,7 @@
                 <option value="">Select a game</option>
                 <option value="Bible Blast">Bible Blast</option>
                 <option value="Virtual Hamster">Virtual Hamster</option>
+                <option value="Chronicles of Faith">Chronicles of Faith</option>
                 <option value="Landex Development Website">Website</option>
                 <option value="Other">Other</option>
               </select>
@@ -256,6 +258,13 @@
             <p>
               Report pet behavior issues, save data problems, or bugs affecting
               progression.
+            </p>
+          </div>
+          <div class="support-card">
+            <h4>Chronicles of Faith</h4>
+            <p>
+              Report chapter progression bugs, battle issues, cutscene problems,
+              or overworld navigation behavior.
             </p>
           </div>
           <div class="support-card">
@@ -405,12 +414,33 @@
         const gameField = supportForm.elements.namedItem("game");
         const platformField = supportForm.elements.namedItem("platform");
 
+        const gameAliases = {
+          "bible blast": "Bible Blast",
+          "virtual hamster": "Virtual Hamster",
+          "chronicles of faith": "Chronicles of Faith",
+          "chroncicles of faith": "Chronicles of Faith",
+          website: "Landex Development Website",
+          "landex development website": "Landex Development Website",
+          other: "Other",
+        };
+
+        const platformAliases = {
+          iphone: "iPhone",
+          ipad: "iPad",
+          android: "Android",
+          macos: "macOS",
+          website: "Website",
+          other: "Other",
+        };
+
         if (prefilledGame && gameField) {
-          gameField.value = prefilledGame;
+          const key = prefilledGame.trim().toLowerCase();
+          gameField.value = gameAliases[key] || prefilledGame;
         }
 
         if (prefilledPlatform && platformField) {
-          platformField.value = prefilledPlatform;
+          const key = prefilledPlatform.trim().toLowerCase();
+          platformField.value = platformAliases[key] || prefilledPlatform;
         }
 
         if (urlParams.get("submitted") === "1") {

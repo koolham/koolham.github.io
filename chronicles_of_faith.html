@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chronicles of Faith - Landex Development</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="canonical"
+      href="https://www.landex.dev/chronicles_of_faith.html"
+    />
+    <meta
+      name="description"
+      content="Chronicles of Faith is a biblical RPG adventure built with Flutter and Flame. Explore story-driven chapters, guide a party of heroes, and battle through scripture-inspired encounters on iOS, Android, and macOS."
+    />
+    <meta name="author" content="Ian Lander" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Chronicles of Faith - Landex Development"
+    />
+    <meta
+      property="og:description"
+      content="A biblical RPG adventure with chapter-based exploration, party management, and tactical battles."
+    />
+    <meta
+      property="og:url"
+      content="https://www.landex.dev/chronicles_of_faith.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.landex.dev/images/chronicles_of_faith_logo.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Chronicles of Faith",
+        "operatingSystem": "iOS, Android, macOS",
+        "applicationCategory": "GameApplication",
+        "description": "A biblical RPG adventure built with Flutter and Flame featuring chapter-based exploration, story cutscenes, party progression, and tactical battles.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Landex Development",
+          "url": "https://www.landex.dev/"
+        }
+      }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WFX8SGC0R9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WFX8SGC0R9");
+    </script>
+    <style>
+      .chronicles-page {
+        background: radial-gradient(
+          circle at top,
+          #f7ecd9 0%,
+          #f8fafc 36%,
+          #e2e8f0 100%
+        );
+        color: #1f2937;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        color: #6b4f2a;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      .game-hero {
+        background: #fffaf0;
+        border-radius: 12px;
+        box-shadow: 0 10px 22px rgba(15, 42, 68, 0.12);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        border: 1px solid #f3e2c0;
+        position: relative;
+      }
+      .hero-support-link {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        background: #5a3f1b;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      .hero-support-link:hover {
+        opacity: 0.9;
+      }
+      .game-hero-logo {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 16px;
+        flex-shrink: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+      .game-hero-text h2 {
+        margin: 0 0 0.4rem 0;
+        font-size: 1.9rem;
+        color: #5a3f1b;
+        font-weight: 700;
+      }
+      .game-hero-text .tagline {
+        color: #475569;
+        font-size: 1.05rem;
+        margin: 0 0 1rem 0;
+      }
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .badge {
+        background: #ead9b6;
+        color: #5a3f1b;
+        border-radius: 999px;
+        padding: 0.25rem 0.85rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      .card {
+        background: #fffaf0;
+        border-radius: 12px;
+        box-shadow: 0 10px 22px rgba(15, 42, 68, 0.12);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid #f3e2c0;
+      }
+      .card h3 {
+        margin-top: 0;
+        margin-bottom: 0.9rem;
+        font-size: 1.35rem;
+        color: #5a3f1b;
+        font-weight: 600;
+      }
+      .card ul {
+        margin: 0;
+        padding-left: 1.3rem;
+        color: #334155;
+      }
+      .card ul li {
+        margin-bottom: 0.45rem;
+      }
+      .store-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.2rem;
+      }
+      .store-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.7rem 1.4rem;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+        border: 2px solid transparent;
+      }
+      .store-btn:hover {
+        opacity: 0.85;
+        transform: scale(1.03);
+      }
+      .store-btn.placeholder {
+        background: #fff5df;
+        color: #7c5a29;
+        border-color: #f3e2c0;
+        cursor: not-allowed;
+        font-style: italic;
+      }
+      .store-btn.placeholder:hover {
+        opacity: 1;
+        transform: none;
+      }
+      .store-btn.support {
+        background: #5a3f1b;
+        color: #fff;
+        border-color: #5a3f1b;
+      }
+      .store-btn.badge {
+        padding: 6px 10px;
+        background: none;
+        border: 2px solid #5a3f1b;
+        border-radius: 10px;
+      }
+      .store-btn.badge img {
+        height: 60px;
+        display: block;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .step-number {
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+        background: #c89f57;
+        color: #1f2937;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+      .step-text strong {
+        display: block;
+        color: #5a3f1b;
+        margin-bottom: 0.15rem;
+      }
+      .step-text {
+        color: #334155;
+        font-size: 0.97rem;
+        padding-top: 0.2rem;
+      }
+      .screenshots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .screenshot-slot {
+        aspect-ratio: 16 / 10;
+        background: linear-gradient(135deg, #fff5df 0%, #e2e8f0 100%);
+        border: 2px dashed #b08946;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .screenshot-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition:
+          transform 0.2s,
+          filter 0.2s;
+      }
+      .screenshot-slot img:hover {
+        transform: scale(1.02);
+        filter: brightness(0.95);
+      }
+      .lightbox-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .lightbox-modal.active {
+        display: flex;
+      }
+      .lightbox-modal img {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .lightbox-modal .close-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border: none;
+        font-size: 1.8rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .lightbox-modal .close-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      @media (max-width: 600px) {
+        .game-hero {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .hero-support-link {
+          position: static;
+          margin-bottom: 0.75rem;
+        }
+        .badge-row {
+          justify-content: center;
+        }
+        .game-hero-logo {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body class="chronicles-page">
+    <header>
+      <div class="header-inner">
+        <div class="header-flex">
+          <img
+            src="header-banner.svg"
+            alt="Landex Development Logo"
+            class="site-logo"
+          />
+        </div>
+        <div class="header-title">
+          <h1>Landex Development</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+
+      <div class="game-hero">
+        <a
+          href="support.html?game=Chronicles%20of%20Faith"
+          class="hero-support-link"
+          >Support</a
+        >
+        <img
+          src="images/chronicles_of_faith_logo.png"
+          alt="Chronicles of Faith preview"
+          class="game-hero-logo"
+        />
+        <div class="game-hero-text">
+          <h2>Chronicles of Faith</h2>
+          <p class="tagline">A story-rich biblical RPG adventure</p>
+          <div class="badge-row">
+            <span class="badge">Biblical RPG</span>
+            <span class="badge">Story Chapters</span>
+            <span class="badge">Party Progression</span>
+            <span class="badge">Tactical Battles</span>
+            <span class="badge">Overworld Exploration</span>
+          </div>
+          <p>
+            Journey through scripture-inspired acts, recruit heroes, and battle
+            through handcrafted encounters. Chronicles of Faith blends classic
+            RPG flow with biblical storytelling across iOS, Android, and macOS.
+          </p>
+          <div class="store-buttons">
+            <a href="#" class="store-btn placeholder">iOS - Coming Soon</a>
+            <a href="#" class="store-btn placeholder">Android - Coming Soon</a>
+            <a href="#" class="store-btn placeholder">macOS - Coming Soon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Gameplay Flow</h3>
+        <ul class="steps">
+          <li class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">
+              <strong>Begin the journey</strong>
+              Start from the menu and choose a chapter from the current act.
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">
+              <strong>Explore the overworld</strong>
+              Move through maps, discover events, and trigger story cutscenes.
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">
+              <strong>Fight strategic battles</strong>
+              Manage Hearts, Spirit Points, and party composition to win key
+              encounters.
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-number">4</div>
+            <div class="step-text">
+              <strong>Grow your party</strong>
+              Recruit members, equip wearables, and progress chapter-by-chapter.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Preliminary Screens</h3>
+        <div class="screenshots-grid">
+          <div
+            class="screenshot-slot"
+            onclick="openLightbox('cof_01_menu_journey.png', 'Menu journey')"
+          >
+            <img src="images/cof_01_menu_journey.png" alt="Menu journey" />
+          </div>
+          <div
+            class="screenshot-slot"
+            onclick="openLightbox('cof_02_party_stats.png', 'Party stats')"
+          >
+            <img src="images/cof_02_party_stats.png" alt="Party stats" />
+          </div>
+          <div
+            class="screenshot-slot"
+            onclick="openLightbox('cof_04_world_map.png', 'World map')"
+          >
+            <img src="images/cof_04_world_map.png" alt="World map" />
+          </div>
+          <div
+            class="screenshot-slot"
+            onclick="
+              openLightbox(
+                'cof_05_overworld_exploration.png',
+                'Overworld exploration',
+              )
+            "
+          >
+            <img
+              src="images/cof_05_overworld_exploration.png"
+              alt="Overworld exploration"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="lightbox-modal" id="lightbox">
+        <button class="close-btn" onclick="closeLightbox()">✕</button>
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+
+      <div class="card">
+        <h3>Planned Highlights</h3>
+        <ul>
+          <li>
+            <strong>Chapter-driven content</strong> with modular acts and story
+            progression
+          </li>
+          <li>
+            <strong>Tactical battle loop</strong> with party, inventory, and
+            progression systems
+          </li>
+          <li>
+            <strong>Data-driven world design</strong> for chapters, enemies,
+            loot, and cutscenes
+          </li>
+          <li>
+            <strong>Cross-platform support</strong> on iOS, Android, and macOS
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      &copy; 2026 Landex Development ·
+      <a href="privacy_policy.html">Privacy Policy</a> ·
+      <a href="support.html?game=Chronicles%20of%20Faith">Support</a>
+    </footer>
+
+    <script>
+      function openLightbox(src, alt) {
+        const lightbox = document.getElementById("lightbox");
+        const img = document.getElementById("lightbox-img");
+        img.src = "images/" + src;
+        img.alt = alt;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      document
+        .getElementById("lightbox")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeLightbox();
+          }
+        });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
