@@ -259,6 +259,17 @@ footer a:hover {
   background: linear-gradient(120deg, #fdf6e3 60%, #fceabb 100%);
 }
 
+.game-feature-banner {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5e7eb;
+  margin: 0 0 0.8rem;
+  object-fit: cover;
+}
+
 .site-logo {
   width: 100%;
   height: 100%;
@@ -739,6 +750,9 @@ footer a:hover {
   }
   .game-info {
     width: 100%;
+  }
+  .game-feature-banner {
+    max-width: 100%;
   }
   .header-flex {
     flex-direction: column;

@@ -118,11 +118,15 @@
         flex-shrink: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       }
-      .game-hero-text h2 {
-        margin: 0 0 0.4rem 0;
-        font-size: 1.9rem;
-        color: #6d28d9;
-        font-weight: 700;
+      .game-hero-title-banner {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        margin: 0 0 0.75rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        border: 1px solid #e9d5ff;
+        display: block;
       }
       .game-hero-text .tagline {
         color: #475569;
@@ -362,6 +366,11 @@
           width: 120px;
           height: 120px;
         }
+        .game-hero-title-banner {
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     </style>
   </head>
@@ -391,7 +400,13 @@
           class="game-hero-logo"
         />
         <div class="game-hero-text">
-          <h2>Virtual Hamster</h2>
+          <img
+            src="images/virtual_hamster_header.png"
+            alt="Virtual Hamster title banner"
+            class="game-hero-title-banner"
+            loading="lazy"
+            decoding="async"
+          />
           <p class="tagline">
             A cozy virtual pet game — care for adorable pixel-art hamsters
           </p>
