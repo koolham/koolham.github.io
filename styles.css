@@ -260,7 +260,6 @@ footer a:hover {
   background: linear-gradient(120deg, #fdf6e3 60%, #fceabb 100%);
 }
 
-<<<<<<< HEAD
 .game-feature-banner {
   width: 100%;
   max-width: 540px;
@@ -272,10 +271,8 @@ footer a:hover {
   object-fit: cover;
 }
 
-=======
 /* The banner is square and the seed sits above the text, so the image is
    oversized and centred on the text block, clipping the seed out of view. */
->>>>>>> 3bf4070 (Crop header banner to show only the text)
 .site-logo {
   position: absolute;
   top: 50%;
